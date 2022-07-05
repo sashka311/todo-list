@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
 
@@ -7,9 +7,13 @@ const Folder = ({
   removeTodo,
   todoList,
   folderName,
-  isVisible,
-  setIsVisible,
+  setTodoList,
+  // isVisible,
+  // setIsVisible,
+  addTodo,
 }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
     <div className="folder">
       <div
@@ -25,7 +29,12 @@ const Folder = ({
         <div className="folderArrow"></div>
       </div>
       {isVisible ? (
-        <PostList checkTodo={checkTodo} remove={removeTodo} list={todoList} />
+        <PostList
+          addTodo={addTodo}
+          checkTodo={checkTodo}
+          remove={removeTodo}
+          list={todoList}
+        />
       ) : (
         ""
       )}

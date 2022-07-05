@@ -1,7 +1,15 @@
 import React from "react";
 import PostItem from "./PostItem";
+import PostForm from "./PostForm";
 
-const PostList = ({ list, remove, checkTodo, isChecked, setIsChecked }) => {
+const PostList = ({
+  list,
+  addTodo,
+  remove,
+  checkTodo,
+  isChecked,
+  setIsChecked,
+}) => {
   return (
     <div>
       {list.map((elem, index) => (
@@ -15,6 +23,7 @@ const PostList = ({ list, remove, checkTodo, isChecked, setIsChecked }) => {
           index={index}
         />
       ))}
+      <PostForm addTodo={addTodo} />
     </div>
   );
 };
