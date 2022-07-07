@@ -8,9 +8,9 @@ const Folder = ({
   todoList,
   folderName,
   setTodoList,
+  addTodo,
   // isVisible,
   // setIsVisible,
-  addTodo,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -34,6 +34,7 @@ const Folder = ({
           checkTodo={checkTodo}
           remove={removeTodo}
           list={todoList}
+          setTodoList={setTodoList}
         />
       ) : (
         ""

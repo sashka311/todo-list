@@ -38,6 +38,7 @@
 .checkTodo {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .checkTodoCompleted {
   background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.92775' y='1.59765' width='17.9607' height='17.9607' rx='4.98909' fill='%23B5B5BA'/%3E%3Cpath d='M14.7769 7.40886L14.6097 7.24037L14.4332 7.399L9.72974 11.6242L7.38581 9.44263L7.2089 9.27798L7.03873 9.44959L6.24083 10.2542L6.06134 10.4353L6.24621 10.6108L9.555 13.7524L9.7235 13.9124L9.89503 13.7556L15.5666 8.57338L15.7585 8.39804L15.5754 8.21352L14.7769 7.40886Z' fill='%23F4F4F4' stroke='%23F4F4F4' stroke-width='0.498909'/%3E%3Crect x='1.92775' y='1.59765' width='17.9607' height='17.9607' rx='4.98909' stroke='%23B5B5BA' stroke-width='1.99563'/%3E%3C/svg%3E%0A");
@@ -56,6 +57,7 @@
   height: 20px;
   justify-content: end;
   border-radius: 50%;
+  cursor: pointer;
 }
 .folder {
   padding: 10px;
