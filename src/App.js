@@ -8,21 +8,20 @@ import FolderList from "./components/FolderList";
 
 function App() {
   const [todoList, setTodoList] = useState([
-    { id: 1, inner: "firstInner", isChecked: false },
-    { id: 2, inner: "secondInner", isChecked: false },
-    { id: 3, inner: "thirdInner", isChecked: false },
-    { id: 4, inner: "thirdInner", isChecked: true },
-    { id: 5, inner: "thirdInner", isChecked: false },
+    { id: 1, inner: "1", isChecked: false },
+    { id: 2, inner: "2", isChecked: false },
+    { id: 3, inner: "3", isChecked: false },
+    { id: 4, inner: "4", isChecked: true },
+    { id: 5, inner: "5", isChecked: false },
   ]);
   const [todoList1, setTodoList1] = useState([
-    { id: 1, inner: "firstInner", isChecked: false },
-    { id: 2, inner: "secondInner", isChecked: false },
-    { id: 3, inner: "thirdInner", isChecked: false },
-    { id: 4, inner: "thirdInner", isChecked: true },
-    { id: 5, inner: "thirdInner", isChecked: false },
+    { id: 1, inner: "6", isChecked: false },
+    { id: 2, inner: "7", isChecked: false },
+    { id: 3, inner: "8", isChecked: false },
+    { id: 4, inner: "9", isChecked: true },
+    { id: 5, inner: "10", isChecked: false },
   ]);
-  const addTodo = (newTodo, setNewTodo) => {
-    console.log(setTodoList);
+  const addTodo = (newTodo, setNewTodo, setTodoList, todoList) => {
     console.log("add");
     const newPost = {
       id: Date.now(),
@@ -32,7 +31,7 @@ function App() {
     setTodoList([...todoList, newPost]);
     setNewTodo("");
   };
-  const checkTodo = (todo, isChecked, index) => {
+  const checkTodo = (todo, isChecked, index, setTodoList, todoList) => {
     console.log("check");
     console.log(index);
 
@@ -43,7 +42,7 @@ function App() {
     ]);
   };
 
-  const removeTodo = (todo) => {
+  const removeTodo = (todo, setTodoList, todoList) => {
     setTodoList([...todoList].filter((t) => t.id !== todo.id));
   };
   return (

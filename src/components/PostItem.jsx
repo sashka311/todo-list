@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
-const PostItem = ({ inner, remove, todo, isChecked, checkTodo, index }) => {
+const PostItem = ({
+  inner,
+  remove,
+  todo,
+  isChecked,
+  checkTodo,
+  index,
+  setTodoList,
+  todoList,
+}) => {
   return (
     <div className="todoItem">
       <div
         className={isChecked ? "checkTodoCompleted" : "checkTodo"}
         onClick={() => {
-          checkTodo(todo, isChecked, index);
+          checkTodo(todo, isChecked, index, setTodoList, todoList);
         }}
       ></div>
       <div
@@ -14,7 +23,10 @@ const PostItem = ({ inner, remove, todo, isChecked, checkTodo, index }) => {
       >
         {inner}
       </div>
-      <button className="deleteTodoButton" onClick={() => remove(todo)}>
+      <button
+        className="deleteTodoButton"
+        onClick={() => remove(todo, setTodoList, todoList)}
+      >
         X
       </button>
     </div>

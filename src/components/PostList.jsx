@@ -3,16 +3,17 @@ import PostItem from "./PostItem";
 import PostForm from "./PostForm";
 
 const PostList = ({
-  list,
   addTodo,
   remove,
   checkTodo,
   isChecked,
   setIsChecked,
+  setTodoList,
+  todoList,
 }) => {
   return (
     <div>
-      {list.map((elem, index) => (
+      {todoList.map((elem, index) => (
         <PostItem
           checkTodo={checkTodo}
           todo={elem}
@@ -21,9 +22,15 @@ const PostList = ({
           inner={elem.inner}
           isChecked={elem.isChecked}
           index={index}
+          setTodoList={setTodoList}
+          todoList={todoList}
         />
       ))}
-      <PostForm addTodo={addTodo} />
+      <PostForm
+        todoList={todoList}
+        setTodoList={setTodoList}
+        addTodo={addTodo}
+      />
     </div>
   );
 };

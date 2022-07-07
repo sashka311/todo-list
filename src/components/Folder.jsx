@@ -30,10 +30,10 @@ const Folder = ({
       </div>
       {isVisible ? (
         <PostList
+          todoList={todoList}
           addTodo={addTodo}
           checkTodo={checkTodo}
           remove={removeTodo}
-          list={todoList}
           setTodoList={setTodoList}
         />
       ) : (
