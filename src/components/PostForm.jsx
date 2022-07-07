@@ -12,12 +12,12 @@ const PostForm = ({ addTodo, setTodoList, todoList }) => {
         value={newTodo}
         onChange={(event) => setNewTodo(event.target.value)}
         type="text"
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            addTodo(newTodo, setNewTodo, setTodoList, todoList);
+          }
+        }}
       />
-      <MyButton
-        onClick={() => addTodo(newTodo, setNewTodo, setTodoList, todoList)}
-      >
-        Add new todo
-      </MyButton>
     </div>
   );
 };

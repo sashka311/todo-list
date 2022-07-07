@@ -7,16 +7,18 @@
 .App {
   padding: 20px;
   display: flex;
-  width: 600px;
-  background: #f1f1f1;
+  width: 390px;
+  background: #f5f5f5;
   margin: 0 auto;
   justify-content: center;
   flex-wrap: wrap;
   color: #413f3f;
 }
+.todoList {
+  margin-top: 25px;
+}
 .todoInner {
-  justify-self: end;
-  padding: 0px 10px;
+  margin-left: 10px;
 }
 .todoInnerComplete {
   text-decoration-line: line-through;
@@ -26,17 +28,16 @@
   display: flex;
   margin: 10px;
   padding: 5px;
+  align-items: center;
 }
 
 .postForm {
-  display: flex;
   width: 100%;
-  flex-wrap: nowrap;
 }
 
 .checkTodoCompleted,
 .checkTodo {
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   cursor: pointer;
 }
@@ -53,7 +54,7 @@
   border: 1px solid black;
   color: red;
   font-weight: bold;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   justify-content: end;
   border-radius: 50%;
@@ -63,11 +64,13 @@
   padding: 10px;
   width: 100%;
 }
+
 .folderTitle {
   width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
+  flex-wrap: nowrap;
 }
 .folderIcon {
   background: no-repeat
@@ -86,6 +89,7 @@
 }
 .folderHr {
   flex: 1;
+  margin: 0px 15px;
   height: 1px;
   background: rgba(188, 188, 196, 0.44);
 }

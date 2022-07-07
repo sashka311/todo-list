@@ -12,7 +12,7 @@ const PostList = ({
   todoList,
 }) => {
   return (
-    <div>
+    <div className={"todoList"}>
       {todoList.map((elem, index) => (
         <PostItem
           checkTodo={checkTodo}

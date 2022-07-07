@@ -45,6 +45,7 @@ function App() {
   const removeTodo = (todo, setTodoList, todoList) => {
     setTodoList([...todoList].filter((t) => t.id !== todo.id));
   };
+
   return (
     <div className="App">
       <Folder

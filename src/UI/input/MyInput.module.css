@@ -1,7 +1,27 @@
+.myInputWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
 .myInput {
-  flex: 2;
+  flex: 1;
   padding: 5px;
   background: white;
-  border: 1px solid;
   margin: 5px;
+  border: 0px;
+  background: transparent;
+}
+
+.myInput::placeholder {
+  color: #898888;
+}
+.myInput:focus {
+  outline: none;
+}
+.inputIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.42666' y='1.64255' width='16.9629' height='16.9629' rx='4.49018' fill='%23E2E2E2'/%3E%3Crect x='2.42666' y='1.64255' width='16.9629' height='16.9629' rx='4.49018' stroke='%23E2E2E2' stroke-width='2.99345'/%3E%3C/svg%3E%0A");
 }
