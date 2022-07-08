@@ -5,12 +5,12 @@ import PostList from "./PostList";
 const Folder = ({
   checkTodo,
   removeTodo,
+  removeFolder,
   todoList,
   folderName,
-  setTodoList,
   addTodo,
-  // isVisible,
-  // setIsVisible,
+  folderIndex,
+  folderId,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -29,14 +29,19 @@ const Folder = ({
         <div
           className={isVisible ? "folderArrowOpen" : "folderArrowClose"}
         ></div>
+        {isVisible ? "" : <div className={"todoAmount"}>{todoList.length}</div>}
+        <div
+          className="deleteFolderButton"
+          onClick={() => removeFolder(folderId)}
+        ></div>
       </div>
       {isVisible ? (
         <PostList
           todoList={todoList}
           addTodo={addTodo}
           checkTodo={checkTodo}
-          remove={removeTodo}
-          setTodoList={setTodoList}
+          removeTodo={removeTodo}
+          folderIndex={folderIndex}
         />
       ) : (
         ""

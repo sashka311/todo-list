@@ -4,12 +4,10 @@ import PostForm from "./PostForm";
 
 const PostList = ({
   addTodo,
-  remove,
+  removeTodo,
   checkTodo,
-  isChecked,
-  setIsChecked,
-  setTodoList,
   todoList,
+  folderIndex,
 }) => {
   return (
     <div className={"todoList"}>
@@ -17,19 +15,18 @@ const PostList = ({
         <PostItem
           checkTodo={checkTodo}
           todo={elem}
-          remove={remove}
+          removeTodo={removeTodo}
           key={elem.id}
           inner={elem.inner}
           isChecked={elem.isChecked}
           index={index}
-          setTodoList={setTodoList}
-          todoList={todoList}
+          folderIndex={folderIndex}
         />
       ))}
       <PostForm
         todoList={todoList}
-        setTodoList={setTodoList}
         addTodo={addTodo}
+        folderIndex={folderIndex}
       />
     </div>
   );

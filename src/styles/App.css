@@ -8,17 +8,22 @@
   padding: 20px;
   display: flex;
   width: 390px;
-  background: #f5f5f5;
-  margin: 0 auto;
+  margin: 20px auto;
+
   justify-content: center;
   flex-wrap: wrap;
   color: #413f3f;
+
+  -webkit-box-shadow: 1px 11px 21px 12px rgba(34, 60, 80, 0.18);
+  -moz-box-shadow: 1px 11px 21px 12px rgba(34, 60, 80, 0.18);
+  box-shadow: 1px 11px 21px 12px rgba(34, 60, 80, 0.18);
 }
 .todoList {
   margin-top: 25px;
 }
 .todoInner {
   margin-left: 10px;
+  word-break: break-all;
 }
 .todoInnerComplete {
   text-decoration-line: line-through;
@@ -30,8 +35,24 @@
   padding: 5px;
   align-items: center;
 }
+.todoAmount {
+  display: flex;
+  color: #f4f4f4;
+  background: #413f3f;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-left: 6px;
+  font-weight: 100;
+}
 
 .postForm {
+  padding-left: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   width: 100%;
 }
 
@@ -48,21 +69,23 @@
   background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.92775' y='1.69372' width='17.9607' height='17.9607' rx='4.98909' stroke='%23C4C4C4' stroke-width='1.99563'/%3E%3C/svg%3E%0A");
 }
 
-.deleteTodoButton {
+.deleteTodoButton,
+.deleteFolderButton {
+  background: url("../images/icon-close.png");
+  background-size: cover;
   margin-left: auto;
-  background: transparent;
-  border: 1px solid black;
-  color: red;
-  font-weight: bold;
   min-width: 20px;
   height: 20px;
-  justify-content: end;
-  border-radius: 50%;
   cursor: pointer;
+}
+.deleteFolderButton {
+  margin-left: 6px;
+}
+.folderList {
+  width: 100%;
 }
 .folder {
   padding: 10px;
-  width: 100%;
 }
 
 .folderTitle {
@@ -87,6 +110,7 @@
   width: 10px;
   height: 6px;
   margin-left: 5px;
+  transition: transform 0.3s;
 }
 .folderArrowClose {
   transform: rotate(-90deg);

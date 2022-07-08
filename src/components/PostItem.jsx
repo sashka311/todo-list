@@ -1,34 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 const PostItem = ({
   inner,
-  remove,
+  removeTodo,
   todo,
   isChecked,
   checkTodo,
   index,
-  setTodoList,
-  todoList,
+  folderIndex,
 }) => {
+  const handleCheckBoxClick = (e) => {
+    checkTodo(index, folderIndex);
+  };
+
+  const handleRemoveTodoClick = (e) => {
+    removeTodo(todo, folderIndex);
+  };
+  useEffect(() => {
+    if (!todo.inner) {
+      removeTodo(todo, folderIndex);
+    }
+  }, [todo]);
   return (
     <div className="todoItem">
       <div
         className={isChecked ? "checkTodoCompleted" : "checkTodo"}
-        onClick={() => {
-          checkTodo(todo, isChecked, index, setTodoList, todoList);
-        }}
+        onClick={handleCheckBoxClick}
       ></div>
       <div
         className={isChecked ? "todoInner todoInnerComplete" : "todoInner  "}
       >
         {inner}
       </div>
-      <button
-        className="deleteTodoButton"
-        onClick={() => remove(todo, setTodoList, todoList)}
-      >
-        X
-      </button>
+      <div className="deleteTodoButton" onClick={handleRemoveTodoClick}></div>
     </div>
   );
 };
