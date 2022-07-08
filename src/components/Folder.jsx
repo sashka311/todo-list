@@ -26,7 +26,9 @@ const Folder = ({
         {folderName}
         <div className="folderHr"></div>
 
-        <div className="folderArrow"></div>
+        <div
+          className={isVisible ? "folderArrowOpen" : "folderArrowClose"}
+        ></div>
       </div>
       {isVisible ? (
         <PostList

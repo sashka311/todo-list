@@ -80,12 +80,16 @@
   height: 25px;
 }
 
-.folderArrow {
+.folderArrowOpen,
+.folderArrowClose {
   background: no-repeat
     url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.96274 5.70863L0.729004 1.47489L2.14092 0.0639801L4.96274 2.8868L7.78457 0.0639801L9.19648 1.47489L4.96274 5.70863Z' fill='%23413F3F'/%3E%3C/svg%3E%0A");
   width: 10px;
   height: 6px;
   margin-left: 5px;
+}
+.folderArrowClose {
+  transform: rotate(-90deg);
 }
 .folderHr {
   flex: 1;
