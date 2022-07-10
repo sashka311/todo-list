@@ -27,7 +27,7 @@ const FolderList = ({
         placeholder={"Add new folder..."}
         onKeyDown={(e) => handleAddFolderEnter(e)}
       />
-      {folderList.map((elem, index) => (
+      {folderList?.map((elem, index) => (
         <Folder
           key={elem.id}
           folderIndex={index}

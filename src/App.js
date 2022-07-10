@@ -4,6 +4,7 @@ import FolderList from "./components/FolderList";
 import MyInput from "./UI/input/MyInput";
 
 function App() {
+  //test data
   const todoList = [
     { id: 1, inner: "1", isChecked: false },
     { id: 2, inner: "2", isChecked: false },
@@ -49,7 +50,7 @@ function App() {
     const newFolder = {
       id: Date.now(),
       folderName: newFolderTitle,
-      todoList: [{ id: Date.now() }],
+      todoList: [],
     };
     setFolderList([...folderList, newFolder]);
   };
